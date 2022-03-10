@@ -1,16 +1,29 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { Component } from '@angular/core';
 
-import { AppComponent } from './app.component';
 
-@NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
-export class AppModule { }
+export class AppComponent {
+  title = 'Angular-Empty-Project';
+
+  public num1:number = 0;
+  public num2:number = 0;
+  public risultato:number = 0;
+
+  div(){
+    this.risultato = this.num1 / this.num2
+  }
+  per(){
+    this.risultato = this.num1 * this.num2
+  }
+  sum(){
+    this.risultato = this.num1 + this.num2
+  }
+  sot(){
+    this.risultato = this.num1 - this.num2
+  }
+}
